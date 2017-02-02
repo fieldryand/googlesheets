@@ -29,6 +29,7 @@
 #' }
 #'
 #' @keywords internal
+#' @export
 gs_perm_ls <- function(ss, filter = NULL) {
 
   url <- file.path(.state$gd_base_url_files_v2, ss$sheet_key, "permissions")
@@ -88,6 +89,7 @@ gs_perm_ls <- function(ss, filter = NULL) {
 #' }
 #'
 #' @keywords internal
+#' @export
 gs_perm_add <- function(ss, email = NULL,
                         type = c("anyone", "user", "domain", "group"),
                         role = c("reader", "writer", "owner"),
@@ -170,6 +172,7 @@ gs_perm_add <- function(ss, email = NULL,
 #' }
 #'
 #' @keywords internal
+#' @export
 gs_perm_edit <- function(ss, email = NULL, perm_id = NULL,
                          role = "reader", commenter = FALSE, verbose = TRUE) {
 
@@ -231,6 +234,7 @@ gs_perm_edit <- function(ss, email = NULL, perm_id = NULL,
 #' }
 #'
 #' @keywords internal
+#' @export
 gs_perm_delete <- function(ss, email = NULL, perm_id = NULL, verbose = TRUE) {
 
   stopifnot(inherits(ss, "googlesheet"),
